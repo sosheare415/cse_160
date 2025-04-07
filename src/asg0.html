@@ -1,0 +1,65 @@
+<!-- Sean O'Shea-Reyff-->
+<!-- sosheare@ucsc.edu-->
+<!-- CSE160: Computer Graphics Intro-->
+<!-- Professor Davis-->
+
+<!-- I'll give a quick citation for the resources that I used as they include the videos found on the linked CSE160 youtube channel, and from the developer.mozilla.org section for JavaScript-->
+<!-- https://www.youtube.com/watch?v=G7CDmeW7Lso&list=PLbyTU_tFIkcNplHMXN_G4sB0wjjmJuRpz&index=6 -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML -->
+ <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript -->
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Draw a blue rectangle (canvas version)</title>
+    </head>
+
+  <body onload="main()">
+    <canvas id="example" width="400" height="400">
+         Please use a browser that supports "canvas"
+    </canvas>
+    <script src="asg0.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+  </body>
+
+
+    <br><br>
+    <label for="x">v1: X Coordinate: </label>
+    <input type="text" id="x" name="x">
+
+    <label for="y">v1: Y Coordinate: </label>
+    <input type="text" id="y" name="y">
+    <br><br>
+
+    <label for="x2">v2: X Coordinate: </label>
+    <input type="text" id="x2" name="x2">
+
+    <label for="y2">v2: Y Coordinate: </label>
+    <input type="text" id="y2" name="y2">
+    <br><br>
+
+
+    <input type="button" value="draw" onclick="handleDrawEvent()" /><br><br>
+
+    <label for="operationSelection">Operation: </label>
+
+    <select name="operation" id="operationSelection">
+        <option value="Add">Add</option>
+        <option value="Sub">Subtract</option>
+        <option value="Mul">Multiply</option>
+        <option value="Div">Divide</option>
+        <option value="Mag">Magnitude</option>
+        <option value="Norm">Normalize</option>
+        <option value="Angle">Angle between</option>
+        <option value="Area">Area</option>
+    </select>
+
+    <label for="Scalar">Scalar: </label>
+    <input type="text" id="Scal" name="Scal">
+
+    </br></br>
+
+    <input type="button" value="draw" onclick="handleDrawOperationEvent()" /><br><br>
+
+
+</html>
